@@ -1,0 +1,39 @@
+
+import java.util.Scanner;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ *
+ * @author JISHWA
+ */
+public class comma_input_string {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter comma inputed string:");
+        String s = sc.nextLine();
+        System.out.println("len:" + s.length() + " str:" + s);
+        int[] arr = new int[6];
+        String c = ",";
+        String ch = "";
+        int k = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (!s.substring(i, i + 1).equals(c)) {
+                ch += s.substring(i, i + 1);
+            } else {
+                arr[k] = Integer.parseInt(ch);
+                System.out.println(arr[k]);
+                k++;
+                ch = "";
+            }
+
+        }
+        max.max_method(arr);
+    }
+
+}
